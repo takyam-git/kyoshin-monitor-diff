@@ -46,9 +46,9 @@ class Diff
 		$current = array();
 		foreach ($this->map as $pos) {
 			$rgb = imagecolorat($gif, $pos[0], $pos[1]);
-			$current[] = str_pad(($rgb >> 16) & 0xFF, 3, '0') .
-				str_pad(($rgb >> 8) & 0xFF, 3, '0') .
-				str_pad($rgb & 0xFF, 3, '0');
+			$current[] = str_pad(($rgb >> 16) & 0xFF, 3, '0', STR_PAD_LEFT) .
+				str_pad(($rgb >> 8) & 0xFF, 3, '0', STR_PAD_LEFT) .
+				str_pad($rgb & 0xFF, 3, '0', STR_PAD_LEFT);
 		}
 
 		//最初の1回めなら何もしない
