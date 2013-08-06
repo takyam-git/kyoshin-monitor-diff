@@ -7,6 +7,7 @@ http://realtime-earthquake-monitor.bosai.go.jp/
 ## requirement
 * pecl mongo ( $ pecl install mongo )
 * mongodb
+* GD
 
 ## Usage
 1. (re-generate map.php if you need) ``$ php parse.php``
